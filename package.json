@@ -8,7 +8,9 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "buttplug": "^1.0.17",
+    "@headlessui/vue": "^1.7.3",
+    "buffer": "^6.0.3",
+    "buttplug": "1.0.14",
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
