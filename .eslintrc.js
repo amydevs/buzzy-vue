@@ -16,7 +16,8 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 
     // Indent with 2 spaces
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "vue/html-indent": ["error", 2]
   },
 
 }
