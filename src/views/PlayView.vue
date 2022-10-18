@@ -5,8 +5,6 @@
 </template>
 
 <script lang="ts" setup>
-import { inject } from 'vue';
-import { clientKey } from '@/modules/injects'
 import { useRouter } from 'vue-router';
 import { useButtplugStore } from '@/store/buttplug';
 

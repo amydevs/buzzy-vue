@@ -1,4 +1,4 @@
-import { ButtplugClient, ButtplugClientDevice, buttplugInit } from 'buttplug'
+import { ButtplugClient, ButtplugClientDevice } from 'buttplug'
 import { defineStore } from 'pinia'
 import { inject, ref } from 'vue';
 export const useButtplugStore = defineStore('buttplug', () => {
