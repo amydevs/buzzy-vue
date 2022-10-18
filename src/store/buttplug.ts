@@ -1,9 +1,8 @@
-import { clientKey } from '@/modules/injects';
 import { ButtplugClient, ButtplugClientDevice, buttplugInit } from 'buttplug'
 import { defineStore } from 'pinia'
 import { inject, ref } from 'vue';
 export const useButtplugStore = defineStore('buttplug', () => {
-  const client = inject(clientKey) as ButtplugClient;
+  const client = inject("client") as ButtplugClient;
   const devices = ref<ButtplugClientDevice[]>([]);
 
   const addDevice = (device: ButtplugClientDevice) => {
