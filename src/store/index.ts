@@ -1,4 +1,6 @@
+import { ButtplugClient } from 'buttplug'
 import { createStore } from 'vuex'
+import buttplugStore from './modules/buttplug'
 
 export default createStore({
   state: {
@@ -10,5 +12,6 @@ export default createStore({
   actions: {
   },
   modules: {
+    buttplugStore
   }
 })

@@ -1,8 +1,24 @@
 /** @type {import('tailwindcss').Config} */
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#714fac",
+        secondary: "#714fac",
+        error: "#ff3863",
+        success: "#3dfb84"
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(({addVariant}) => {
+      addVariant('scroll0', ['html:not([scroll]) &', 'html[scroll="0"] &']);
+    })
+  ],
 }
