@@ -4,15 +4,13 @@
             <div class="relative flex h-14 items-center justify-between">
                 <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     <DisclosureButton class="inline-flex items-center justify-center p-2">
-                        <span className="sr-only">Open main menu</span>
+                        <span class="sr-only">Open main menu</span>
                         H
                     </DisclosureButton>
                 </div>
-                <div className="flex flex-1 items-center sm:items-stretch justify-between">
-                    <div className="flex flex-shrink-0 px-3 text-lg items-center hover:text-primary transition-all">
-                        <Link href="/">
-                            <a>Amy<span className="text-primary">;</span></a>
-                        </Link>
+                <div class="flex flex-1 items-center sm:items-stretch justify-between">
+                    <div class="flex flex-shrink-0 px-3 text-lg items-center hover:text-primary transition-all">
+                        <RouterLink to="/"><span class="text-primary">Buzzy!</span></RouterLink>
                     </div>
                 </div>
             </div>
