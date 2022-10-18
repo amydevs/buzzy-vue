@@ -5,11 +5,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ButtplugClient } from 'buttplug';
 import { inject } from 'vue';
 import { clientKey } from '@/modules/injects'
+import { useRouter } from 'vue-router';
 
 const client = inject(clientKey);
+const router = useRouter();
+if (!client?.Connected) {
+  router.push("/settings")
+}
 
 
 </script>
