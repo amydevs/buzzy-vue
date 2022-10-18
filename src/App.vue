@@ -1,7 +1,7 @@
 <template>
-  <nav class="fixed">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/settings">Settings</router-link>
-  </nav>
-  <router-view/>
+    <NavBar />
+    <router-view/>
 </template>
+<script lang="ts" setup>
+import NavBar from '@/components/NavBar.vue'
+</script>
