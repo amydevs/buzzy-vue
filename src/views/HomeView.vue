@@ -8,9 +8,11 @@
 import { inject } from 'vue';
 import { clientKey } from '@/modules/injects'
 import { useRouter } from 'vue-router';
+import { useButtplugStore } from '@/store/buttplug';
 
-const client = inject(clientKey);
+const client = useButtplugStore().client;
 const router = useRouter();
+
 if (!client?.Connected) {
   router.push("/settings")
 }

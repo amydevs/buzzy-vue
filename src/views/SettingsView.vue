@@ -6,17 +6,17 @@
         <thead>
           <tr class="border">
             <th class="w-2/3">
-                Device
+              Device
             </th>
             <th>
-                Disconnect
+              Disconnect
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="border" v-for="device in client?.Connected ? client?.Devices : []" :key="device.Index">
+          <tr class="border" v-for="device in devices" :key="device.Index">
             <td>{{device.Name}}</td>
-            <td>Disconnect</td>
+            <td><button class="underline" @click="disconnect_device(device as any)">Disconnect</button></td>
           </tr>
         </tbody>
       </table>
@@ -27,11 +27,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { clientKey } from '@/modules/injects';
+import { useButtplugStore } from '@/store/buttplug';
 import { ButtplugClientDevice, ButtplugEmbeddedConnectorOptions } from 'buttplug';
-import { inject } from 'vue';
 
-const client = inject(clientKey);
+const { client, devices } = useButtplugStore();
 
 const embedded_connect = async () => {
   const opts = new ButtplugEmbeddedConnectorOptions();
@@ -47,9 +46,8 @@ const embedded_connect = async () => {
     client?.disconnect();
   }
 }
-
-const vibrate_device = async (device: ButtplugClientDevice) => {
-  device.vibrate(1.0);
+const disconnect_device = async (device: ButtplugClientDevice) => {
+  console.log(device.emitDisconnected());
 }
 
 </script>
