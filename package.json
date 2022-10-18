@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.3",
+    "@heroicons/vue": "^2.0.12",
     "buffer": "^6.0.3",
     "buttplug": "1.0.14",
     "core-js": "^3.8.3",
