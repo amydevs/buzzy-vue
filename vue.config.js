@@ -16,5 +16,13 @@ module.exports = defineConfig({
         "buffer": require.resolve("buffer")
       }
     }
+  },
+  pwa: {
+    name: "Buzzy",
+    workboxPluginMode: 'GenerateSW',
+    workboxOptions: {
+      skipWaiting: true,
+      mode: "production"
+    }
   }
 })

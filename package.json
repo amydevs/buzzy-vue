@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "express": "node ./express.js"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.3",
@@ -34,6 +35,7 @@
     "autoprefixer": "^10.4.12",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "express": "^4.18.2",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.1.8",
     "typescript": "~4.5.5"
