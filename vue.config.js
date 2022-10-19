@@ -22,7 +22,12 @@ module.exports = defineConfig({
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
       skipWaiting: true,
-      mode: "production"
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('.*wasm'),
+          handler: 'NetworkFirst',
+        }
+      ]
     }
   }
 })
