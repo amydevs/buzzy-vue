@@ -20,14 +20,6 @@ module.exports = defineConfig({
   pwa: {
     name: "Buzzy",
     workboxPluginMode: 'GenerateSW',
-    workboxOptions: {
-      skipWaiting: true,
-      runtimeCaching: [
-        {
-          urlPattern: new RegExp('.*wasm'),
-          handler: 'NetworkFirst',
-        }
-      ]
-    }
+    maximumFileSizeToCacheInBytes: 5000000,
   }
 })
