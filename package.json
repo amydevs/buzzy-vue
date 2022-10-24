@@ -12,7 +12,7 @@
     "@headlessui/vue": "^1.7.3",
     "@heroicons/vue": "^2.0.12",
     "buffer": "^6.0.3",
-    "buttplug": "1.0.14",
+    "buttplug": "^1.0.17",
     "core-js": "^3.8.3",
     "pinia": "^2.0.23",
     "register-service-worker": "^1.7.2",
